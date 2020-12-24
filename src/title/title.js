@@ -29,31 +29,9 @@ const weatherURL = "http://api.openweathermap.org/data/2.5/weather?id=3441575&ap
 
 let test;
 class Title extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            data: undefined
-        };
-    }
-    weatherData = async (id) => {
-        return await fetch(weatherURL)
-          .then((response) => {
-          console.log(response);
-          })
-          .then((response) => {
-            data = response.json();
-            return response.json();
-          })
-          .then((data) => {
-            return data;
-          })
-          .catch((error) => {
-              console.log(error)
-          });
-        };
     render() {
         return(
-            <h1 className="title">Current weather for {this.data?.name} is</h1>
+            <h1 className="title">Current weather for is</h1>
         );
     }
 };
