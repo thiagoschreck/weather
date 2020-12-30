@@ -17,6 +17,6 @@ export default class Title extends React.Component {
   
     render() {
       const { data } = this.state
-      return data ? <h1 className="title">Current weather for {data.name} is</h1> : "Loading...";
+      return data ? <h1 className="title">Current weather for {data.name} is</h1> : <h1 className="title">Loading...</h1>;
     }
   }
