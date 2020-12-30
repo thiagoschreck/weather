@@ -2,8 +2,8 @@ import React, { useState }from 'react';
 import '../index.css';
 import './title-style.css';
 
-const CITY = 'Montevideo,UY';
 const APIKEY = '0823e272568368a3ed22b2cd2a830e01';
+const CITY = 'Montevideo,UY';
 const UNITS = 'metric';
 
 export default class Title extends React.Component {
@@ -17,6 +17,6 @@ export default class Title extends React.Component {
   
     render() {
       const { data } = this.state
-      return data ? <h1 className="title">Current weather for {data.name} is</h1> : <h1 className="title">Loading...</h1>;
+      return data ? <h1 className="title">Current weather for {data.name},{data.sys.country} is</h1> : <h1 className="title">Loading...</h1>;
     }
   }
